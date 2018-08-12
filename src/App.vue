@@ -7,7 +7,7 @@
 
           </div>
           <div style="display:flex;">
-            <span class="social-icon" v-for="(social, pos) in socials" :key="pos">
+            <span class="social-icon" v-for="(social, pos) in socials" :key="pos" @click="goto(social.url)">
               <img :src="social.src" :alt="social.alt">
             </span>
             <!-- <span class="social-icon">
@@ -35,10 +35,10 @@
           <div style="flex:1;"></div>
           <div style="" class="flex">
             <div class="right">
-              <img src="/static/img/right_shad_200h.png" class="hand" alt="right hand">
+              <img src="/static/img/right_shad_80h.png" class="hand" alt="right hand">
             </div>
             <div>
-              <img src="/static/img/left_shad_200h.png" class="hand" alt="right hand">
+              <img src="/static/img/left_shad_80h.png" class="hand" alt="right hand">
 
             </div>
           </div>
@@ -62,18 +62,26 @@ export default {
     socials: [
       {
         src: "/static/img/github.svg",
-        alt:"github"
+        alt:"github",
+        url: "//github.com/darlingtonamz"
       },
       {
         src:"/static/img/linkedin.svg",
-        alt:"linkedin"
+        alt:"linkedin",
+        url: "//linkedin.com/in/amanze"
       },
       {
         src:"/static/img/twitter.svg",
-        alt:"twitter"
+        alt:"twitter",
+        url: "//twitter.com/am_zee"
       }
     ]
   }),
+  methods: {
+    goto(url){
+      window.open(url, '_blank');
+    }
+  },
   mounted() {
     setTimeout(() => {
       this.$refs['intro-main'].classList.add("active");
@@ -99,12 +107,14 @@ body {
   color: #2c3e50;
 }
 .pad {padding: 16px;}
+
 main {
   /* text-align: center; */
   margin-top: 40px;
   max-height: 400px;
   transition: .3s height ease-in-out;
   height: 0px;
+  overflow: hidden;
   // position: relative;
 
   &.active {
