@@ -16,5 +16,11 @@
         "destination": "/service-worker.js"
       }
     ]
+  },
+  "functions": {
+    "source": "functions-dist",
+    "predeploy": [
+      "npm run functions-clean && npm run functions-build && npm run functions-copy"
+    ]
   }
 }
