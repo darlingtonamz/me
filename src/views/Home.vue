@@ -16,7 +16,7 @@
               <div id="menu" class="d-block d-sm-none col-12">
                 <a data-action="bio" id="bio_button" style="animation-delay:0.9s;"
                   @click="summaryShowing = !summaryShowing">{{summaryShowing ? 'BIO' : 'BACK'}}</a>
-                <a data-action="biz_inquiries" href="mailto:hello@amanze.me" id="biz_inquiries_button" class="button" style="animation-delay:1.1s;">hello@amanze.me</a>
+                <a data-action="biz_inquiries" href="mailto:amzogb@gmail.com" id="biz_inquiries_button" class="button" style="animation-delay:1.1s;">hello@amanze.me</a>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@
             <div id="menu" class="d-none d-sm-block col-12">
               <a data-action="bio" id="bio_button" style="animation-delay:0.9s;"
                 @click="summaryShowing = !summaryShowing">{{summaryShowing ? 'BIO' : 'BACK'}}</a>
-              <a data-action="biz_inquiries" href="mailto:hello@amanze.me" id="biz_inquiries_button" class="button" style="animation-delay:1.1s;">hello@amanze.me</a>
+              <a data-action="biz_inquiries" href="mailto:amzogb@gmail.com" id="biz_inquiries_button" class="button" style="animation-delay:1.1s;">hello@amanze.me</a>
             </div>
           </div>
           <div id="summary" v-if="summaryShowing">
